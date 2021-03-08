@@ -1,0 +1,31 @@
+
+
+
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<title>Reviews</title>
+
+
+<div class="container"> 
+       
+    
+        <li class="nav-item btn-outline-success">
+                <a class="nav-link" href="{{ download_csv }}">Download CSV</a>
+        </li>
+        
+
+
+        
+
+        <form action="/review" method="POST" class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" name="content" type="search" placeholder="Search"
+                        aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+</div>
+
+<div class="container">
+        
+        <h3>{{ table | safe }}</h3>
+     
+</div>
